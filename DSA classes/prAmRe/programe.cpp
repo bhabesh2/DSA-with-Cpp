@@ -3,24 +3,27 @@ using namespace std;
 
 // write a function for a prime num check;
 
-// void checkPrime(int n){
-//     for(int i = 2; i*i <= n; i++){
-//         if(n % i == 0){
-//             cout<<"not prime"<<endl;
-//             return;
-//         }
-//         cout<<"prime"<<endl;
-//         return;
-//     }
-// }
+bool chekPrime(int n){
+    for(int i = 2; i*i <= n; i++){
+        if(n % i == 0){
+            return false;
+        }
+    }
+        return true;
+}
 
-// int main(){
-//     int n;
-//     cin>>n;
+int main(){
+    int n;
+    cin>>n;
 
-//     checkPrime(n);
-//     return 0;
-// }
+    if(chekPrime(n)){
+        cout<<"prime"<<endl;
+    }
+    else{
+        cout<<"not a prime"<<endl;
+    }
+    return 0;
+}
 
 // write a programme to print all the digits from right to left.(reverse)
 
